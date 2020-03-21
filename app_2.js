@@ -2,5 +2,5 @@
 let admin = null;
 let name = null;
 name = "Василий";
-admin = name;
+admin = name1;
 console.log(`Переменная admin ровна ${admin}`);
