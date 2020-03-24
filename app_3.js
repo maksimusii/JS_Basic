@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 let result = 10 + 10 + "10";
 console.log(result);
 result = 10 + "10" + 10;
