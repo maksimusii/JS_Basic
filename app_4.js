@@ -1,3 +1,4 @@
+
 'use strict';
 // функция сложения
 function summ(a, b) {
