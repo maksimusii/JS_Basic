@@ -1,33 +1,48 @@
 'use strict';
-// функция сложения
-function summ(a, b) {
-    return (a + b);
-}
-// функция вычитания
-function sub(a, b) {
-return (a - b);
-}
-// функция деления
-function div(a, b) {
-return (a / b);
-}
-// функция деления
-function mul(a, b) {
-return (a * b);
-}
+const products = [
+    {
+    id: 3,
+    price: 127,
+    photos: [
+    "1.jpg",
+    "2.jpg",
+    ]
+    },
+    {
+    id: 5,
+    price: 499,
+    photos: []
+    },
+    {
+    id: 10,
+    price: 26,
+    photos: [
+    "3.jpg"
+    ]
+    },
+    {
+    id: 8,
+    price: 78,
+    },
+    ];
+let testf = [];
 
-function matchOperation(arg1, arg2, operation) {
-    switch (operation) {
-        case "+":
-            return (summ(arg1, arg2));
-        case "-":
-            return (sub(arg1, arg2));
-        case "/":
-            return (div(arg1, arg2));
-        case "*":
-            return (mul(arg1, arg2));
+function Cretlengh(image) {
+    if (image.photos !== undefined) {
+        return true; 
     }
-
 }
 
-console.log(matchOperation(10, -6, "-"));
+let Filter_result = products.filter(Cretlengh); // Отфильтровыем объекты с свойством photos
+Filter_result = Filter_result.filter(product => product.photos.length > 0) // Отфильтровываем объекты с пустым свойством photos
+console.log(Filter_result);
+//сортировка по цене от низкой к высокой
+products.sort(function (a, b) {
+    if (a.price > b.price) {
+        return 1;
+    }
+    if (a.price < b.price) {
+        return - 1;
+    }
+})
+console.log(products);
