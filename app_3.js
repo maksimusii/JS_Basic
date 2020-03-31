@@ -1,14 +1,29 @@
 'use strict';
-let a = -1, b = 0;
-
-if (a >= 0 & b >= 0) {
-        console.log(`Разность чисел a и b равна ${a - b}`);
+const post = {
+    author: "John", //вывести этот текст
+    postId: 23,
+    comments: [
+    {
+    userId: 10,
+    userName: "Alex",
+    text: "lorem ipsum",
+    rating: {
+    likes: 10,
+    dislikes: 2 //вывести это число
     }
-
-if (a < 0 & b < 0) {
-        console.log(`Произведение чисел a и b равно ${a * b}`);
+    },
+    {
+    userId: 5, //вывести это число
+    userName: "Jane",
+    text: "lorem ipsum 2", //вывести этот текст
+    rating: {
+    likes: 3,
+    dislikes: 1
     }
-if (Math.sign(a) !== Math.sign(b)) {
-    console.log(`Сумма чисел a и b равна ${a * b}`);
- } 
-    
+    },
+    ]
+    }
+console.log(post.author);
+console.log(post.comments[0].rating.dislikes);
+console.log(post.comments[1].userId);
+console.log(post.comments[1].text);
